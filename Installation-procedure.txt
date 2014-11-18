@@ -1,0 +1,7 @@
+--------------------------------------
+How to run BTS PenTesting Lab?
+--------------------------------------
+1. Install XAMPP or WAMPP in your machine
+2. Extract the zip file into the htdocs folder (make sure to rename the folder to "btslab").
+3. Open the "http://localhost/btslab/setup.php" url in your browser.
+4. Click the Setup.
