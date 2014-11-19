@@ -1,8 +1,6 @@
 <?php 
 include($_SERVER['DOCUMENT_ROOT'].'/btslab/header.php');
-if(!isset($_SESSION['isAdminLoggedIn'])) { 
-header("Location: /btslab/admin/adminlogin.php");
-}
+ 
 include($_SERVER['DOCUMENT_ROOT'].'/btslab/mysqlconnection.php');
 
 if(isset($_POST['delete']))
