@@ -6,11 +6,15 @@ session_start();
  
 include($_SERVER['DOCUMENT_ROOT'].'/btslab/header.php'); 
 include($_SERVER['DOCUMENT_ROOT'].'/btslab/mysqlconnection.php');
-
+if(isset($_REQUEST['action']) && $_REQUEST['action']='delete')
+{
+mysql_query("Delete from Messages;");
+}
 $result=mysql_query("select * from Messages;") or die(mysql_error());
 $row=mysql_num_rows($result);
 if($row>=1)
 {
+echo "<div style='text-align: right; '> <a href='?action=delete' >Delete All Messages</a></div> ";
 echo "</br></br>Messages: </br>";
 echo "<ol>";
 	while($row=mysql_fetch_array($result))
