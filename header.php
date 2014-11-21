@@ -142,6 +142,7 @@ if(!isset($_SESSION))
 					echo "<li><a href='/btslab/logout.php'>LogOut</a></li>";
 			    } 
 			?>
+			<li><a href="/btslab/contact.php">Contact</a></li>
 		</ul>
 	</div>
 

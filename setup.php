@@ -25,7 +25,15 @@ mysql_query("INSERT into posts(content,title, user) values ('Feel free to ask an
 mysql_query("create table tdata(id int, page varchar(30))") or die("Failed to create tdata Table<br/>".mysql_error());
 	mysql_query("Insert into tdata values(1,'ext1.html')");
 	mysql_query("Insert into tdata values(2,'ext2.html')");
+	
+//Messages Table Creation
+	$sql="Create table Messages(msgid int NOT NULL AUTO_INCREMENT,name varchar(30),email varchar(60), msg varchar(500),primary key (msgid))";
+	mysql_query($sql) or die("Failed to create Messages Table".mysql_error());
+	mysql_query("INSERT into Messages(name,email, msg) values ('TestUser','Test@localhost', 'Hi admin, how are you')") or die("Failed to insert Messages".mysql_error());
+	
+	
 	echo "<script>alert('The webApp has been installed successfully')</script> ";
+
 	mysql_close();
 }
 }
