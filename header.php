@@ -39,9 +39,22 @@ if(!isset($_SESSION))
 							<li><a href="/btslab/vulnerability/phpinjection/challenge2.php?data=Hello">Challenge 2</a>	</li>
 							</ul>
 						</li>
+<li><a href="#">PHP Object Injection</a>
+ <ul>
+<?php
+
+$a=array("Java","C","Perl");
+$a1=array("Assembly","C","Perl");
+$s=serialize($a);
+$s1=serialize($a1);
+?>
+<a href='/btslab/vulnerability/injection/obj.php?array=<?php echo $s; ?>'>Challenge 1</a></li>
+<li><a href='/btslab/vulnerability/injection/obj1.php?array=<?php echo $s1; ?>'>Challenge 2</a></li>
+</ul>
+</li>
 						<li><a href="/btslab/vulnerability/rfi/RFI.php?file=news.php">Remote File Inclusion</a></li>
 						<li>
-						<a href="/btslab/vulnerability/ssi/ssi.php">Server Side Includes(SSI) Injection</a>
+						<a href="/btslab/vulnerability/ssi/ssi.php">Server Side Includes(SSI) Injection</a>						
 					</li>
 						</ul>
 					</li>
