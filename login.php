@@ -27,7 +27,7 @@ $password=$_POST['password'];
 include('header.php');
 ?>
 
-<form action="login" method="post">
+<form action="login.php" method="post">
 <table> 
 <tr><td>UserName: </td><td><input type="text" name="username" /></td></tr>
 <tr><td>Password :</td><td><input type="password" name="password"/></td></tr>
